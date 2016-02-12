@@ -1,0 +1,28 @@
+<h1>Listing posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  	<% debugger %>
+    <% @photos.each do |photo| %>
+      <tr>
+        <td><%= image_tag photo.photo.url %></td>
+        <td><%= link_to 'Show', photos_path(photo.id) %></td>
+        <td><%= link_to 'Edit', edit_photo_path(photo.id) %></td>
+        <td><%= link_to 'Destroy', photo_path(photo.id), method: :delete, data: { confirm: 'Are you sure to delete this image?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Upload New Image', new_photo_path %>
