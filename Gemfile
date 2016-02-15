@@ -10,6 +10,8 @@ gem 'mysql2' , '~> 0.3.18'
 gem 'sqlite3'
 gem 'mini_magick'
 gem 'carrierwave'
+gem 'bcrypt-ruby', require: 'bcrypt'
+gem 'humanizer'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets

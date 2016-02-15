@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
  
+  get 'articles/index'
+
+  get 'articles/new'
+
+  get 'articles/edit'
+
+  get 'articles/show'
+  
   get 'comments/index'
 
   get 'comments/new'
@@ -12,6 +20,11 @@ Rails.application.routes.draw do
   root :to => "photos#index"
   resources :photos
   resources :comments
+  
+  # root :to => "articles#index"
+  # resources :articles
+    
+  resources :sessions
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

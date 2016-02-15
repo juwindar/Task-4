@@ -27,6 +27,33 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+#config mailer with port 465
+
+    config.action_mailer.raise_delivery_errors = true
+
+    config.action_mailer.delivery_method = :smtp
+
+    config.action_mailer.smtp_settings = {
+
+        :address => "smtp.gmail.com",
+
+        :port => 465,
+
+        :domain => "gmail.com",
+
+        :user_name => "thecuix",
+
+        :password => "abc135bedofroses",
+
+        :authentication => "login",
+
+        :ssl => true,
+
+        :tls => true,
+
+        :enable_starttls_auto => true
+
+    }
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
