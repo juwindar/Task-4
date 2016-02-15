@@ -1,0 +1,9 @@
+ <h3><%= @article.title %></h3>
+
+<p><%= @article.content %></p>
+
+<p><%= link_to 'back to index', articles_path %></p>
+
+<% @product.photos.each do |photo| %>
+  <%= image_tag photo.data.url %>
+<% end %>
